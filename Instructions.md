@@ -6,9 +6,13 @@ Create a command-line application that dynamically generates a README.md from a 
 node index.js
 ```
 
-The user will be prompted for their GitHub username, which will be used to make a call to the GitHub API to retrieve their email and profile image. They will then be prompted with questions about their project.
+1. The user will be prompted for their GitHub username - YES
+2.Which will be used to make a call to the GitHub API to retrieve their email and profile image. 
+    -emails are saying null?
+    -profile image - 
+3.They will then be prompted with questions about their project.
 
-The README will be populated with the following:
+4.The README will be populated with the following:
 
 * At least one badge
 * Project title

@@ -1,12 +1,22 @@
-const questions = [
 
-];
+const fs = require("fs");
+const axios = require("axios");
+const inquirer = require("inquirer");
+const api = require("./utils/api")
 
-function writeToFile(fileName, data) {
-}
+ 
+return api.getUser()
 
-function init() {
 
-}
+// const questions = [
 
-init();
+// ];
+
+// function writeToFile(fileName, data) {
+// }
+
+// function init() {
+
+// }
+
+// init();
