@@ -12,7 +12,7 @@ const api = {
   })
   //then console log response from github profile
     .then(function({ username }) {
-    const queryUrl = `https://api.github.com/users/${username}`;
+    const queryUrl = `https://api.github.com/users/${username}?access_token=33d3785a28df8c67d7356cf063aefee72dbb9f76`;
 
     axios.get(queryUrl).then(function(res) {
       
