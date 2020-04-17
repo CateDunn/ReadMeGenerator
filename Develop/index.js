@@ -23,7 +23,7 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "URL",
+        name: "url",
         message: "Enter the URL of your project"
       },
       {
@@ -43,7 +43,7 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "install",
+        name: "installation",
         message: "What command should be run to install dependencies?"
       },
       {
@@ -53,12 +53,12 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "using",
+        name: "usage",
         message: "What does the user need to know about using the repo?"
       },
       {
         type: "input",
-        name: "contributions",
+        name: "contributing",
         message: "What does the user need to know about contributing to the repo?"
       },
       
@@ -66,45 +66,46 @@ function promptUser() {
     
   };
 
-  function generateReadMe(answers) {
-    return `
-  # ${answers.title} Project 
-    By: ${answers.github}
+function generateMarkdown(answers) {
+return `# ${answers.title} 
+
+##By: 
+
+${answers.github}
   
-  # Description:
-    ${answers.description}
+## Description: 
 
-  # Table of Contents:
-    
-    * Installation 
-    * Usage
-    * License
-    * Contributing
-    * Tests
+${answers.description}
 
+## Table of Contents:
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
 
-  # Installation
+## Installation 
+To install, do the following: ${answers.installation}
 
-    ${answers.install}
+## Usage
 
-  # Usage
+${answers.usage}
 
-    ${answers.using}
+## License
 
+${answers.license}
 
-  # License
+## Contributing
 
-    ${answers.license}
+${answers.contributing}
 
+## Tests
 
-  # Contributing
+${answers.tests}
 
-    ${answers.contributions}
-
-
-  # Tests
-
-    ${answers.tests}
+This was created by ${answers.github}
+Check out the project at ${answers.url}
+You can contact me at ${answers.email}
 
 
   `;
@@ -113,9 +114,9 @@ function promptUser() {
 
   promptUser()
     .then(function(answers) {
-        const readME = generateReadMe(answers)
+        const readME = generateMarkdown(answers)
     
-        return writeFileAsync("README.md", readME);
+        return writeFileAsync("ReadMe.md", readME);
     })
     .then(function() {
         console.log("Successfully wrote to README.md");
