@@ -40,7 +40,8 @@ function promptUser() {
         choices: [
           "MIT", 
           "GNU", 
-          "Apache"
+          "Apache",
+          "other"
         ]
       },
       {
@@ -104,9 +105,9 @@ ${answers.contributing}
 
 ${answers.tests}
 
-This was created by ${answers.github}
-Check out the project at ${answers.url}
-You can contact me at ${answers.email}
+This was created by ${answers.github}.
+Check out the project at ${answers.url}.
+You can contact me at ${answers.email}.
 
 
   `;
