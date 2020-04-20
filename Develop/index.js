@@ -8,7 +8,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
     return inquirer.prompt([
-      {
+{                
         type: "input",
         name: "github",
         message: "What is your GitHub username?"
@@ -109,37 +109,25 @@ This was created by ${answers.github}.
 Check out the project at ${answers.url}.
 You can contact me at ${answers.email}.
 
-
   `;
   }
   
 
-  promptUser()
-    .then(function(answers) {
-        const readME = generateMarkdown(answers)
+promptUser()
+  .then(function(answers) {
+    const readME = generateMarkdown(answers)
     
-        return writeFileAsync("ReadMe.md", readME);
-    })
-    .then(function() {
-        console.log("Successfully wrote to README.md");
-    })
-    .catch(function(err) {
-        console.log(err);
-    })
+    return writeFileAsync("ReadMe.md", readME);
+  })
+  .then(function() {
+      console.log("Successfully wrote to README.md");
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 
 
 
 
 
-// const questions = [
 
-// ];
-
-// function writeToFile(fileName, data) {
-// }
-
-// function init() {
-
-// }
-
-// init();
