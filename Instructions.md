@@ -32,11 +32,7 @@ node index.js
 Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
 
 ```
-AS A developer
-
-I WANT a README generator
-
-SO THAT I can easily put together a good README for a new project
+AS A developer I WANT a README generator SO THAT I can easily put together a good README for a new project
 ```
 
 Refer to the [Good README guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md).
