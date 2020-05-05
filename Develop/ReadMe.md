@@ -1,8 +1,12 @@
 # ReadMe Generator By: CateDunn
+
+![](README2.gif)
+![](README.gif)
     
   ## Description: 
   
-  This project generates README files
+  This project generates README files.
+  
   
   ## Table of Contents:
   * [Installation](#installation)
@@ -17,6 +21,7 @@
   ## Usage
   
     AS A developer I WANT a README generator SO THAT I can easily put together a good README for a new project
+
   
   ## License
   
